@@ -64,12 +64,15 @@ class ProductManager {
 
 	deleteProductAll = async () => await this.writeFile([]);
 
-	updateProductByID = async (id , {title, description, price, thumbail, stock}) => {
+	updateProductByID = async (id , {title, description, price, thumbnail, stock}) => {
 		let objs = await this.getAll();
 		try {
-			objs = objs.find(obj => obj.id == id)
+			objs = objs.find(obj => obj.id === id)
 			objs.title = title;
 			objs.price = price ;
+			objs.description = description;
+			objs.thumbnail = thumbnail;
+			objs.stock = stock;
 			console.log(objs);
 			return await this.writeFile(objs)
 		} catch (error) {

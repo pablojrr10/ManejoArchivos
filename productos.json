@@ -1,9 +1,9 @@
 {
   "title": "mp3",
-  "description": "50 pulgadas",
+  "description": "50gb",
   "price": 666,
-  "thumbnail": "url1",
-  "stock": 50,
+  "thumbnail": "url4",
+  "stock": 30,
   "id": 1,
   "code": "code1"
 }
